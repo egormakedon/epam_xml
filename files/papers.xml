@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<papers
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.example.com/papers"
+        xsi:schemaLocation="http://www.example.com/students papers.xsd">
+
+
+</papers>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/papers"
+        xmlns:tns="http://www.example.com/papers"
+        elementFormDefault="qualified">
+
+    <element name="papers">
+        <complexType>
+            <sequence>
+                <element name="paper"
+                         type="tns:Paper"
+                         minOccurs="16"
+                         maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Paper">
+        <sequence>
+            <element name="mothly" type="tns:Mothly"/>
+            <element name="color" type="tns:Color"/>
+            <element name="volume" type="tns:Volume"/>
+        </sequence>
+        <attribute name="paper-id" type="tns:Paper-id" use="required"/>
+    </complexType>
+
+    <complexType name="newspaper">
+        <complexContent>
+            <extension base="tns:Paper">
+                <attribute name="subscription-index" type="tns:Subscription-index"/>
+                <attribute name="tittle" type="tns:Tittle" default="Newspaper edition" use="optional"/>
+                <attribute name="gloss" use="optional">
+                    <simpleType>
+                        <restriction base="string">
+                            <enumeration value="no"/>
+                        </restriction>
+                    </simpleType>
+                </attribute>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="journal">
+        <complexContent>
+            <extension base="tns:Paper">
+                <attribute name="subscription-index" type="tns:Subscription-index"/>
+                <attribute name="tittle" type="tns:Tittle" default="Journal edition" use="optional"/>
+                <attribute name="gloss" use="optional">
+                    <simpleType>
+                        <restriction base="string">
+                            <enumeration value="yes"/>
+                        </restriction>
+                    </simpleType>
+                </attribute>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="booklet">
+        <complexContent>
+            <extension base="tns:Paper">
+                <attribute name="tittle" type="tns:Tittle" default="Booklet edition" use="optional"/>
+                <attribute name="gloss" use="optional">
+                    <simpleType>
+                        <restriction base="string">
+                            <enumeration value="yes"/>
+                        </restriction>
+                    </simpleType>
+                </attribute>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <simpleType name="Paper-id">
+        <restriction base="ID">
+            <pattern value="\\d"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Tittle">
+        <restriction base="string">
+            <pattern value="(^[A-Z][a-z\s]{0,30}$)"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Mothly">
+        <restriction base="string">
+            <enumeration value="yes"/>
+            <enumeration value="no"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Color">
+        <restriction base="string">
+            <enumeration value="yes"/>
+            <enumeration value="no"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Volume">
+        <restriction base="string">
+            <pattern value="(^[5-9]\\d*$)"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Subscription-index">
+        <restriction base="string">
+            <pattern value="(^\\d{4}$)"/>
+        </restriction>
+    </simpleType>
+</schema>
