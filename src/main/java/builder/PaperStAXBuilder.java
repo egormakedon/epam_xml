@@ -131,7 +131,6 @@ public class PaperStAXBuilder extends AbstractPaperBuilder {
                         switch (PaperType.valueOf(name.toUpperCase())) {
                             case MOTHLY:
                                 paper.setMothly(Boolean.parseBoolean(reader.getText()));
-                                System.out.println(reader.getText());
                                 break;
                             case COLOR:
                                 paper.setColor(Boolean.parseBoolean(reader.getText()));

@@ -6,4 +6,10 @@
             <package name="src.test.java"/>
         </packages>
     </test>
+
+    <test name="Test">
+        <classes>
+            <class name="TestBuilder"/>
+        </classes>
+    </test>
 </suite>
