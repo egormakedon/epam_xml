@@ -7,13 +7,17 @@
     <element name="papers">
         <complexType>
             <sequence>
-                <element name="paper"
-                         type="tns:Paper"
+                <element ref="tns:paper"
                          minOccurs="16"
                          maxOccurs="unbounded" />
             </sequence>
         </complexType>
     </element>
+
+    <element name="paper" type="tns:Paper" abstract="true"/>
+    <element name="newspaper" type="tns:Newspaper" substitutionGroup="tns:paper"/>
+    <element name="journal" type="tns:Journal" substitutionGroup="tns:paper"/>
+    <element name="booklet" type="tns:Booklet" substitutionGroup="tns:paper"/>
 
     <complexType name="Paper">
         <sequence>
@@ -24,7 +28,7 @@
         <attribute name="paper-id" type="tns:Paper-id" use="required"/>
     </complexType>
 
-    <complexType name="newspaper">
+    <complexType name="Newspaper">
         <complexContent>
             <extension base="tns:Paper">
                 <attribute name="subscription-index" type="tns:Subscription-index"/>
@@ -40,7 +44,7 @@
         </complexContent>
     </complexType>
 
-    <complexType name="journal">
+    <complexType name="Journal">
         <complexContent>
             <extension base="tns:Paper">
                 <attribute name="subscription-index" type="tns:Subscription-index"/>
@@ -56,7 +60,7 @@
         </complexContent>
     </complexType>
 
-    <complexType name="booklet">
+    <complexType name="Booklet">
         <complexContent>
             <extension base="tns:Paper">
                 <attribute name="tittle" type="tns:Tittle" default="Booklet edition" use="optional"/>
