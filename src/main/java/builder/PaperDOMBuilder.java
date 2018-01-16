@@ -1,6 +1,7 @@
 package builder;
 
 import constant.PaperType;
+import entity.Journal;
 import entity.Newspaper;
 import entity.Paper;
 import exception.MethodNotSupportedException;
@@ -42,13 +43,13 @@ public class PaperDOMBuilder extends AbstractPaperBuilder {
 
             for (int i = 0; i < newspapersList.getLength(); i++) {
                 Element newspaperElement = (Element) newspapersList.item(i);
-                Paper paper = buildNewspaperOrJournal(newspaperElement);
+                Paper paper = buildNewspaperOrJournal(newspaperElement, PaperType.NEWSPAPER);
                 papers.add(paper);
             }
 
             for (int i = 0; i < journalsList.getLength(); i++) {
                 Element journalElement = (Element) journalsList.item(i);
-                Paper paper = buildNewspaperOrJournal(journalElement);
+                Paper paper = buildNewspaperOrJournal(journalElement, PaperType.JOURNAL);
                 papers.add(paper);
             }
 
@@ -66,8 +67,14 @@ public class PaperDOMBuilder extends AbstractPaperBuilder {
         }
     }
 
-    private Paper buildNewspaperOrJournal(Element newspaperElement) {
-        Paper paper = new Newspaper();
+    private Paper buildNewspaperOrJournal(Element newspaperElement, PaperType paperType) {
+        Paper paper;
+        if (paperType == PaperType.JOURNAL) {
+            paper = new Journal();
+        } else {
+            paper = new Newspaper();
+        }
+
         paper = buildSamePart(paper, newspaperElement);
 
         try {

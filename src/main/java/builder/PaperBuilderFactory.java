@@ -13,8 +13,8 @@ public class PaperBuilderFactory {
         switch (type) {
             case DOM:
                 return new PaperDOMBuilder();
-//            case STAX:
-//                return new PaperStAXBuilder();
+            case STAX:
+                return new PaperStAXBuilder();
             case SAX:
                 return new PaperSAXBuilder();
             default:
