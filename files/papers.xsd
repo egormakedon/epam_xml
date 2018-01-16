@@ -32,11 +32,11 @@
         <complexContent>
             <extension base="tns:Paper">
                 <attribute name="subscription-index" type="tns:Subscription-index" use="required"/>
-                <attribute name="tittle" type="tns:Tittle" default="Newspaper edition" use="optional"/>
+                <attribute name="tittle" type="tns:Tittle" default="Newspaper edition" use="required"/>
                 <attribute name="gloss" use="optional">
                     <simpleType>
                         <restriction base="string">
-                            <enumeration value="no"/>
+                            <enumeration value="false"/>
                         </restriction>
                     </simpleType>
                 </attribute>
@@ -48,11 +48,11 @@
         <complexContent>
             <extension base="tns:Paper">
                 <attribute name="subscription-index" type="tns:Subscription-index" use="required"/>
-                <attribute name="tittle" type="tns:Tittle" default="Journal edition" use="optional"/>
+                <attribute name="tittle" type="tns:Tittle" default="Journal edition" use="required"/>
                 <attribute name="gloss" use="optional">
                     <simpleType>
                         <restriction base="string">
-                            <enumeration value="yes"/>
+                            <enumeration value="true"/>
                         </restriction>
                     </simpleType>
                 </attribute>
@@ -63,11 +63,11 @@
     <complexType name="Booklet">
         <complexContent>
             <extension base="tns:Paper">
-                <attribute name="tittle" type="tns:Tittle" default="Booklet edition" use="optional"/>
+                <attribute name="tittle" type="tns:Tittle" default="Booklet edition" use="required"/>
                 <attribute name="gloss" use="optional">
                     <simpleType>
                         <restriction base="string">
-                            <enumeration value="yes"/>
+                            <enumeration value="true"/>
                         </restriction>
                     </simpleType>
                 </attribute>
@@ -89,15 +89,15 @@
 
     <simpleType name="Mothly">
         <restriction base="string">
-            <enumeration value="yes"/>
-            <enumeration value="no"/>
+            <enumeration value="true"/>
+            <enumeration value="false"/>
         </restriction>
     </simpleType>
 
     <simpleType name="Color">
         <restriction base="string">
-            <enumeration value="yes"/>
-            <enumeration value="no"/>
+            <enumeration value="true"/>
+            <enumeration value="false"/>
         </restriction>
     </simpleType>
 

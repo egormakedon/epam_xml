@@ -5,98 +5,98 @@
         xsi:schemaLocation="http://www.example.com/students papers.xsd">
 
     <newspaper paper-id="Newpaper1" subscription-index="1234567" tittle="Vesti">
-        <mothly>yes</mothly>
-        <color>no</color>
+        <mothly>true</mothly>
+        <color>false</color>
         <volume>7</volume>
     </newspaper>
 
-    <newspaper paper-id="Newpaper2" subscription-index="1564567">
-        <mothly>yes</mothly>
-        <color>yes</color>
+    <newspaper paper-id="Newpaper2" subscription-index="1564567" tittle="Newspaper edition">
+        <mothly>true</mothly>
+        <color>false</color>
         <volume>10</volume>
     </newspaper>
 
-    <newspaper paper-id="Newpaper3" subscription-index="1004567" gloss="no">
-        <mothly>no</mothly>
-        <color>yes</color>
+    <newspaper paper-id="Newpaper3" subscription-index="1004567" gloss="false" tittle="Newspaper edition">
+        <mothly>false</mothly>
+        <color>true</color>
         <volume>12</volume>
     </newspaper>
 
     <newspaper paper-id="Newpaper4" subscription-index="1245907" tittle="Novosti dnya">
-        <mothly>yes</mothly>
-        <color>no</color>
+        <mothly>true</mothly>
+        <color>false</color>
         <volume>5</volume>
     </newspaper>
 
-    <newspaper paper-id="Newpaper5" subscription-index="0012457" gloss="no">
-        <mothly>no</mothly>
-        <color>no</color>
+    <newspaper paper-id="Newpaper5" subscription-index="0012457" gloss="false" tittle="Newspaper edition">
+        <mothly>false</mothly>
+        <color>false</color>
         <volume>8</volume>
     </newspaper>
 
-    <newspaper paper-id="Newpaper6" subscription-index="0000000">
-        <mothly>no</mothly>
-        <color>yes</color>
+    <newspaper paper-id="Newpaper6" subscription-index="0000000" tittle="Newspaper edition">
+        <mothly>false</mothly>
+        <color>true</color>
         <volume>15</volume>
     </newspaper>
 
-    <journal paper-id="Journal1" subscription-index="0912356" gloss="yes">
-        <mothly>no</mothly>
-        <color>no</color>
+    <journal paper-id="Journal1" subscription-index="0912356" gloss="true" tittle="Journal edition">
+        <mothly>false</mothly>
+        <color>false</color>
         <volume>35</volume>
     </journal>
 
-    <journal paper-id="Journal2" subscription-index="0912356" gloss="yes" tittle="Bodybuilding life">
-        <mothly>yes</mothly>
-        <color>yes</color>
+    <journal paper-id="Journal2" subscription-index="0912356" gloss="true" tittle="Bodybuilding life">
+        <mothly>true</mothly>
+        <color>true</color>
         <volume>88</volume>
     </journal>
 
     <journal paper-id="Journal3" subscription-index="0012457" tittle="Glamour journal">
-        <mothly>yes</mothly>
-        <color>yes</color>
+        <mothly>true</mothly>
+        <color>true</color>
         <volume>17</volume>
     </journal>
 
-    <journal paper-id="Journal4" subscription-index="0912356" gloss="yes">
-        <mothly>yes</mothly>
-        <color>yes</color>
+    <journal paper-id="Journal4" subscription-index="0912356" gloss="true" tittle="Journal edition">
+        <mothly>false</mothly>
+        <color>true</color>
         <volume>100</volume>
     </journal>
 
-    <journal paper-id="Journal5" subscription-index="0000001">
-        <mothly>no</mothly>
-        <color>no</color>
+    <journal paper-id="Journal5" subscription-index="0000001" tittle="Journal edition">
+        <mothly>false</mothly>
+        <color>false</color>
         <volume>30</volume>
     </journal>
 
     <booklet paper-id="Booklet1" tittle="Hello">
-        <mothly>no</mothly>
-        <color>yes</color>
+        <mothly>false</mothly>
+        <color>true</color>
         <volume>5</volume>
     </booklet>
 
-    <booklet paper-id="Booklet2" gloss="yes">
-        <mothly>no</mothly>
-        <color>yes</color>
+    <booklet paper-id="Booklet2" gloss="true" tittle="Booklet edition">
+        <mothly>false</mothly>
+        <color>true</color>
         <volume>6</volume>
     </booklet>
 
-    <booklet paper-id="Booklet3" gloss="yes" tittle="Booklet 14 edition">
-        <mothly>yes</mothly>
-        <color>no</color>
+    <booklet paper-id="Booklet3" gloss="true" tittle="Booklet 14 edition">
+        <mothly>true</mothly>
+        <color>false</color>
         <volume>7</volume>
     </booklet>
 
-    <booklet paper-id="Booklet4">
-        <mothly>yes</mothly>
-        <color>yes</color>
+    <booklet paper-id="Booklet4" tittle="Booklet 100 years">
+        <mothly>true</mothly>
+        <color>true</color>
         <volume>8</volume>
     </booklet>
 
-    <booklet paper-id="Booklet5">
-        <mothly>no</mothly>
-        <color>yes</color>
+    <booklet paper-id="Booklet5" tittle="Hello booklet">
+        <mothly>false</mothly>
+        <color>true</color>
         <volume>20</volume>
     </booklet>
 </papers>
