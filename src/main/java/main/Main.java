@@ -8,7 +8,7 @@ import exception.ParserException;
 public class Main {
     public static void main(String[] args) throws ParameterException, ParserException {
         PaperBuilderFactory factory = new PaperBuilderFactory();
-        AbstractPaperBuilder paperBuilder = factory.createPaperBuilder("dom");
+        AbstractPaperBuilder paperBuilder = factory.createPaperBuilder("sax");
         paperBuilder.buildSetPapers("files/papers.xml");
     }
 }

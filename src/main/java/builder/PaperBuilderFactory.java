@@ -15,8 +15,8 @@ public class PaperBuilderFactory {
                 return new PaperDOMBuilder();
 //            case STAX:
 //                return new PaperStAXBuilder();
-//            case SAX:
-//                return new PaperSAXBuilder();
+            case SAX:
+                return new PaperSAXBuilder();
             default:
                 throw new ParameterException(type.name() + " invalid argument");
         }
